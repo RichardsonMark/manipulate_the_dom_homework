@@ -22,5 +22,13 @@ const createWhiskyListItem = function (form) {
     expression.textContent = form.expression.value;
     whiskyListItem.appendChild(expression);
 
+    const distiller = document.createElement('h3');
+    distiller.textContent = form.distiller.value;
+    whiskyListItem.appendChild(distiller);
+
+    const region = document.createElement('p');
+    region.textContent = form.region.value;
+    whiskyListItem.appendChild(region);
+
     return whiskyListItem;
 }
