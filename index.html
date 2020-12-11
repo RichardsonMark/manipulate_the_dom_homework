@@ -8,5 +8,39 @@
   </head>
   <body>
 
+    <form id="new-item-form">
+        <div id="form-wrapper">
+          <div class="form-item">
+            <label for="expression" class="primary">Expression</label>
+            <input type="text" id="expression" required/>
+          </div>
+  
+          <div class="form-item">
+            <label for="distiller" class="primary">Distiller</label>
+            <input type="text" id="distiller" required/>
+          </div>
+  
+          <div class="form-item">
+            <label for="region" class="primary">Region</label>
+            <select id="region">
+              <option value="" disabled selected></option>
+              <option value="Highlands">Highlands</option>
+              <option value="Lowlands">Lowlands</option>
+              <option value="Islands">Islands</option>
+              <option value="Islay">Islay</option>
+              <option value="Speyside">Speyside</option>
+              <option value="Campbeltown">Campbeltown</option>
+            </select>
+          </div>
+        </div>
+        <input type="submit" value="save"/>
+      </form>
+  
+      <button id="delete-all">Delete All</button>
+  
+  
+      <h1>Whisky List</h1>
+      <ul id="reading-list"></ul>
+
   </body>
 </html>
