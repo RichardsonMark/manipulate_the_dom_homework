@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const newItemform = document.querySelector('#new-item-form');
     newItemform.addEventListener('submit', handleNewItemFormSubmit);
+
+    const deleteAllButton = document.querySelector('#delete-all');
+    deleteAllButton.addEventListener('click', handleDeleteAllClick);
 })
 
 
@@ -32,5 +35,15 @@ const createWhiskyListItem = function (form) {
     region.textContent = form.region.value;
     whiskyListItem.appendChild(region);
 
+    const type = document.createElement("li");
+    type.textContent = form.type.value;
+    whiskyListItem.appendChild(type);
+
     return whiskyListItem;
 }
+
+
+const handleDeleteAllClick = function (event) {
+    const whiskyList = document.querySelector('#whisky-list');
+    whiskyList.innerHTML = '';
+  }
