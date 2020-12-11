@@ -11,6 +11,8 @@ const handleNewItemFormSubmit = function (event) {
     const whiskyList = document.querySelector('#whisky-list');
     whiskyList.appendChild(whiskyListItem);
   
+    event.target.reset();
+
   }
 
 
