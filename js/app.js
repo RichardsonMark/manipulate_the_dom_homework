@@ -1,3 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const newItemform = document.querySelector('#new-item-form');
+    newItemform.addEventListener('submit', handleNewItemFormSubmit);
+})
 
-});
+
+const handleNewItemFormSubmit = function (event) {
+    event.preventDefault();
+  
+    const whiskyListItem = createWhiskyListItem(event.target);
+    const whiskyList = document.querySelector('#whisky-list');
+    whiskyList.appendChild(whiskyListItem);
+  
+  }
+
+
+const createWhiskyListItem = function (form) {
+    const whiskyListItem = document.createElement('li');
+    whiskyListItem.classList.add('whisky-list-item');
+
+    const expression = document.createElement('h2');
+    expression.textContent = form.expression.value;
+    whiskyListItem.appendChild(expression);
+
+    return whiskyListItem;
+}
